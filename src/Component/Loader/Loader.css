@@ -1,0 +1,72 @@
+.rings-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.rings {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes rings {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    50%,
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rings {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    50%,
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.rings:after, .rings:before {
+    -webkit-animation: rings 1s infinite linear;
+    animation: rings 1s infinite linear;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 6px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    content: '';
+    height: 30px;
+    left: 50%;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+}
+
+.rings:after {
+    border-left-color: #fff;
+    margin-left: -2px;
+}
+
+.rings:before {
+    animation-direction: reverse;
+    border-right-color: #fff;
+    margin-left: -28px;
+}
