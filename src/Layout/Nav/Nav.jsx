@@ -22,22 +22,22 @@ export default function App() {
       <NavbarContent justify="start">
         <NavbarBrand>
           <a href="#" id="logo">
-            <div className="flex items-center gap-x-2 sm:gap-x-3 md:gap-x-4">
+            <div className="flex items-center gap-x-2 ">
               <div>
                 <img
                   src={Logo}
                   alt=""
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 "
                 />
               </div>
               <div className="text-white">
                 <p
-                  className="font-extrabold text-xl sm:text-2xl md:text-2xl lg:text-2xl text-[#4a7c59] m-0 leading-tight"
+                  className="font-extrabold text-xl sm:text-xl md:text-xl lg:text-xl text-[#4a7c59] m-0 leading-none"
                   id="logo-font"
                 >
                   NATION AID
                 </p>
-                <p className="font-light text-md sm:text-lg md:text-xl lg:text-xl text-[#9cc069] m-0 leading-tight">
+                <p className="font-light text-md sm:text-lg md:text-lg lg:text-lg text-[#9cc069] m-0 leading-none">
                   FOUNDATION
                 </p>
               </div>
@@ -94,12 +94,9 @@ export default function App() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-x-16" justify="end">
         <NavbarItem>
-          <Link
-            className="text-white font-medium px-4 py-2 bg-[#4a7c59] hover:border-2 hover:border-[#4a7c59] hover:bg-[#9cc069]"
-            href="#"
-          >
-            donete
-          </Link>
+          <a href="/buttons/41" className="btn41-43 btn-41">
+            Donate
+          </a>
         </NavbarItem>
       </NavbarContent>
 
@@ -121,6 +118,11 @@ export default function App() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem className="pt-4">
+          <a href="/buttons/41" className="btn41-43 btn-41">
+            Donate
+          </a>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
